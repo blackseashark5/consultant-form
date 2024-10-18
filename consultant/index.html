@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #2dc7ed;
+        }
+
+        /* Container for the form and robot section */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        /* Left section with the robot and message */
+        .robot-section {
+            position: relative;
+            flex: 1;
+        }
+
+        .robot-message {
+            position: absolute;
+            bottom: 150px;
+            left: 50px;
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .robot-message p {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .robot-message span {
+            font-weight: normal;
+            font-size: 0.9rem;
+            color: #00a3ff;
+        }
+
+        .robot-image {
+            position: absolute;
+            bottom: 0;
+            left: 50px;
+            max-height: 200px;
+        }
+
+        /* Right section with the form */
+        .form-section {
+            flex: 2;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-section h2 {
+            margin: 0 0 20px 0;
+            font-size: 2rem;
+            color: #000;
+        }
+
+        .form-section p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-group input,
+        .form-group select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            color: #333;
+            background-color: #f9f9f9;
+            margin-bottom: 20px;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #bbb;
+        }
+
+        .form-section select {
+            appearance: none;
+            background: #f9f9f9 url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="black" d="M2 0L0 2h4L2 0z"/></svg>') no-repeat right 10px center;
+            background-size: 8px 10px;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #00a3ff;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #007acc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Section - Robot Message -->
+        <div class="robot-section">
+            <div class="robot-message">
+                <span>BRING ME BACK!</span>
+                <p>I will be your best cleaning helper</p>
+            </div>
+            <img class="robot-image" src="https://www.example.com/robot-image.png" alt="Robot Image">
+        </div>
+
+        <!-- Right Section - Contact Form -->
+        <div class="form-section">
+            <h2>CONTACT US TODAY</h2>
+            <p>Kindly leave all your details and we will get back to you soon. For brochure downloads, please request in Inquiry Type.</p>
+
+            <!-- Full Name and Company Name -->
+            <div class="form-group">
+                <input type="text" placeholder="Full Name*" required>
+                <input type="text" placeholder="Company Name*" required>
+            </div>
+
+            <!-- Designation and Profile -->
+            <div class="form-group">
+                <input type="text" placeholder="Designation & Title*" required>
+                <select>
+                    <option value="" disabled selected>--Please choose an option--</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Director">Director</option>
+                    <option value="Consultant">Consultant</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+
+            <!-- Email Address and Phone Number -->
+            <div class="form-group">
+                <input type="email" placeholder="Email Address*" required>
+                <input type="tel" placeholder="Phone Number*" required>
+            </div>
+
+            <!-- Country and Inquiry Type -->
+            <div class="form-group">
+                <select>
+                    <option value="" disabled selected>Select Country</option>
+                    <option value="USA">USA</option>
+                    <option value="India">India</option>
+                    <option value="Canada">Canada</option>
+                    <!-- Add more options as needed -->
+                </select>
+
+                <select>
+                    <option value="" disabled selected>Inquiry Type</option>
+                    <option value="Product Info">Product Info</option>
+                    <option value="Support">Cleaning</option>
+                    <option value="Other">Dealer</option>
+                </select>
+            </div>
+
+            <!-- Message Textarea -->
+            <textarea placeholder="Message"></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+
+</body>
+</html>
